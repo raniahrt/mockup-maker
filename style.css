@@ -1,0 +1,130 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.controls {
+    background-color: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px;       /* Spacing between groups */
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    max-width: 900px;
+    width: 90%;
+}
+
+.input-group, .button-group {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align text/buttons left */
+    gap: 8px;
+}
+
+/* Style labels to look like buttons */
+.button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Hide actual file input */
+input[type="file"] {
+    display: none;
+}
+
+#base-filename, #design-filename {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px; /* Space below the button label */
+    word-break: break-all;
+}
+
+#design-preview {
+    max-width: 80px;
+    max-height: 80px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    object-fit: contain; /* Ensure aspect ratio is maintained */
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+    background-color: #218838;
+}
+
+button#reset-button {
+    background-color: #ffc107;
+    color: #333;
+}
+button#reset-button:hover {
+    background-color: #e0a800;
+}
+
+button#save-button {
+    background-color: #17a2b8;
+}
+button#save-button:hover {
+    background-color: #138496;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#info-text {
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+    width: 90%;
+    max-width: 900px;
+}
+
+.canvas-container {
+    width: 90%;
+    max-width: 900px; /* Limit canvas width */
+    margin: 0 auto; /* Center canvas container */
+    border: 1px solid #ccc;
+    background-color: #e9e9e9; /* Slight background for canvas area */
+}
+
+#mockup-canvas {
+    display: block; /* Remove extra space below canvas */
+    max-width: 100%; /* Make canvas responsive */
+    height: auto;   /* Maintain aspect ratio */
+    cursor: crosshair; /* Indicate clickable area */
+}
