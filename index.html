@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Mockup Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Browser-Based Mockup Tool</h1>
+
+    <div class="controls">
+        <div class="input-group">
+            <label for="base-input" class="button">Load Base Image</label>
+            <input type="file" id="base-input" accept="image/*">
+            <span id="base-filename">No file chosen</span>
+         </div>
+         <div class="input-group">
+            <label for="design-input" class="button">Load Design Image</label>
+            <input type="file" id="design-input" accept="image/*">
+            <span id="design-filename">No file chosen</span>
+            <img id="design-preview" alt="Design Preview" src="#" style="display: none;"/>
+         </div>
+         <div class="button-group">
+            <button id="apply-button" disabled>Apply Mockup</button>
+            <button id="reset-button">Reset Points & View</button>
+            <button id="save-button" style="display: none;">Save Result</button> </div>
+    </div>
+
+    <p id="info-text">1. Load Base Image. 2. Click 4 points on it (TL, TR, BR, BL). 3. Load Design Image.</p>
+
+    <div class="canvas-container">
+        <canvas id="mockup-canvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
